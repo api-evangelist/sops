@@ -1,0 +1,58 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "sops": "https://getsops.io/vocab/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "EncryptedFile": "sops:EncryptedFile",
+    "KeyManagementService": "sops:KeyManagementService",
+    "CreationRule": "sops:CreationRule",
+    "KeyGroup": "sops:KeyGroup",
+
+    "version": {
+      "@id": "schema:version",
+      "@type": "xsd:string"
+    },
+    "lastmodified": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "mac": {
+      "@id": "sops:messageAuthenticationCode",
+      "@type": "xsd:string"
+    },
+    "kms": {
+      "@id": "sops:awsKmsKey",
+      "@container": "@set"
+    },
+    "gcp_kms": {
+      "@id": "sops:gcpKmsKey",
+      "@container": "@set"
+    },
+    "azure_kv": {
+      "@id": "sops:azureKeyVault",
+      "@container": "@set"
+    },
+    "age": {
+      "@id": "sops:ageKey",
+      "@container": "@set"
+    },
+    "pgp": {
+      "@id": "sops:pgpKey",
+      "@container": "@set"
+    },
+    "arn": {
+      "@id": "sops:keyArn",
+      "@type": "xsd:string"
+    },
+    "fp": {
+      "@id": "sops:pgpFingerprint",
+      "@type": "xsd:string"
+    },
+    "enc": {
+      "@id": "sops:encryptedDataKey",
+      "@type": "xsd:string"
+    }
+  }
+}

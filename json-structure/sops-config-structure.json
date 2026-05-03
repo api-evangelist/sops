@@ -1,0 +1,75 @@
+{
+  "title": "SOPS Configuration Structure",
+  "description": "Structure of a .sops.yaml configuration file for SOPS creation rules and key management",
+  "type": "object",
+  "fields": [
+    {
+      "name": "creation_rules",
+      "type": "array",
+      "description": "Rules governing which keys to use when creating new encrypted files",
+      "items": {
+        "type": "object",
+        "fields": [
+          {
+            "name": "path_regex",
+            "type": "string",
+            "description": "Regex pattern matching file paths this rule applies to"
+          },
+          {
+            "name": "kms",
+            "type": "string",
+            "description": "Comma-separated list of AWS KMS key ARNs"
+          },
+          {
+            "name": "gcp_kms",
+            "type": "string",
+            "description": "Comma-separated list of GCP KMS resource IDs"
+          },
+          {
+            "name": "azure_keyvault",
+            "type": "string",
+            "description": "Azure Key Vault key URL"
+          },
+          {
+            "name": "age",
+            "type": "string",
+            "description": "Comma-separated list of age public keys"
+          },
+          {
+            "name": "pgp",
+            "type": "string",
+            "description": "Comma-separated list of PGP fingerprints"
+          },
+          {
+            "name": "encrypted_regex",
+            "type": "string",
+            "description": "Regex matching YAML/JSON keys whose values should be encrypted"
+          },
+          {
+            "name": "unencrypted_regex",
+            "type": "string",
+            "description": "Regex matching YAML/JSON keys whose values should NOT be encrypted"
+          },
+          {
+            "name": "key_groups",
+            "type": "array",
+            "description": "Key groups for Shamir Secret Sharing multi-factor access",
+            "items": {
+              "type": "object",
+              "fields": [
+                { "name": "kms", "type": "array", "items": "object" },
+                { "name": "pgp", "type": "array", "items": "string" },
+                { "name": "age", "type": "array", "items": "string" }
+              ]
+            }
+          },
+          {
+            "name": "shamir_threshold",
+            "type": "integer",
+            "description": "Minimum number of key groups required for decryption"
+          }
+        ]
+      }
+    }
+  ]
+}

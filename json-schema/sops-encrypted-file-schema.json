@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/sops/main/json-schema/sops-encrypted-file-schema.json",
+  "title": "SOPS Encrypted File",
+  "description": "Schema for a SOPS-encrypted JSON file with metadata and encryption information",
+  "type": "object",
+  "properties": {
+    "sops": {
+      "type": "object",
+      "description": "SOPS metadata block added to encrypted files",
+      "properties": {
+        "kms": {
+          "type": "array",
+          "description": "AWS KMS key references used for encryption",
+          "items": {
+            "type": "object",
+            "properties": {
+              "arn": {
+                "type": "string",
+                "description": "AWS KMS key ARN"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "enc": {
+                "type": "string",
+                "description": "Base64-encoded encrypted data key"
+              },
+              "aws_profile": {
+                "type": "string",
+                "description": "AWS profile used"
+              }
+            }
+          }
+        },
+        "gcp_kms": {
+          "type": "array",
+          "description": "GCP KMS key references",
+          "items": {
+            "type": "object",
+            "properties": {
+              "resource_id": {
+                "type": "string"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "enc": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "azure_kv": {
+          "type": "array",
+          "description": "Azure Key Vault key references",
+          "items": {
+            "type": "object",
+            "properties": {
+              "vault_url": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "enc": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "age": {
+          "type": "array",
+          "description": "age encryption key references",
+          "items": {
+            "type": "object",
+            "properties": {
+              "recipient": {
+                "type": "string"
+              },
+              "enc": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "pgp": {
+          "type": "array",
+          "description": "PGP key references",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fp": {
+                "type": "string",
+                "description": "PGP fingerprint"
+              },
+              "created_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "enc": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "lastmodified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the file was last encrypted/modified"
+        },
+        "mac": {
+          "type": "string",
+          "description": "Message authentication code for integrity verification"
+        },
+        "version": {
+          "type": "string",
+          "description": "SOPS version used to encrypt the file"
+        }
+      }
+    }
+  },
+  "required": ["sops"],
+  "additionalProperties": true
+}
