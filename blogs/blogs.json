@@ -1,0 +1,13 @@
+{
+  "repo": "sops",
+  "feeds": [
+    {
+      "source": "https://getsops.io/blog/",
+      "feed_url": "https://getsops.io/index.xml",
+      "saved": 1,
+      "title": "SOPS: Secrets OPerationS"
+    }
+  ],
+  "post_count": 1,
+  "fetched": "2026-05-03T23:37:00Z"
+}
