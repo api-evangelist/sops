@@ -51,13 +51,13 @@ common:
     url: https://getsops.io/docs/
   - type: GitHub Org
     url: https://github.com/getsops
-  - type: GitHub Repository
+  - type: GitHubRepository
     url: https://github.com/getsops/sops
   - type: Releases
     url: https://github.com/getsops/sops/releases
   - type: License
     url: https://github.com/getsops/sops/blob/main/LICENSE
-  - type: Changelog
+  - type: ChangeLog
     url: https://github.com/getsops/sops/blob/main/CHANGELOG.rst
   - type: CNCF Sandbox
     url: https://www.cncf.io/projects/sops/
