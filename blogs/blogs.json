@@ -2,12 +2,20 @@
   "repo": "sops",
   "feeds": [
     {
-      "source": "https://getsops.io/blog/",
+      "source": "https://getsops.io/index.xml",
       "feed_url": "https://getsops.io/index.xml",
-      "title": "SOPS: Secrets OPerationS",
-      "saved": 0
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://fluxcd.io/flux/guides/mozilla-sops/",
+      "feed_url": "https://fluxcd.io/flux/guides/mozilla-sops/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 1,
-  "fetched": "2026-05-17T20:20:35Z"
+  "fetched": "2026-06-01T23:35:02Z"
 }
