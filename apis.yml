@@ -42,18 +42,18 @@ apis:
         url: https://getsops.io/docs/
       - type: GitHub
         url: https://github.com/getsops/sops
-      - type: Releases
+      - type: ReleaseNotes
         url: https://github.com/getsops/sops/releases
 common:
   - type: Website
     url: https://getsops.io/
   - type: Documentation
     url: https://getsops.io/docs/
-  - type: GitHub Org
+  - type: GitHubOrg
     url: https://github.com/getsops
   - type: GitHubRepository
     url: https://github.com/getsops/sops
-  - type: Releases
+  - type: ReleaseNotes
     url: https://github.com/getsops/sops/releases
   - type: License
     url: https://github.com/getsops/sops/blob/main/LICENSE
