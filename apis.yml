@@ -45,6 +45,8 @@ apis:
       - type: ReleaseNotes
         url: https://github.com/getsops/sops/releases
 common:
+  - type: DomainSecurity
+    url: security/sops-domain-security.yml
   - type: Website
     url: https://getsops.io/
   - type: Documentation
