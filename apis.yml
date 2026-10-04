@@ -8,15 +8,20 @@ description: >-
   key management. Originally created at Mozilla and donated to the CNCF in 2023.
 type: Index
 deliveryModel:
-  model: unknown
-  open_source: unknown
+  model: self-hosted
+  license: MPL-2.0
+  license_evidence:
+    repo: getsops/sops
+    spdx: MPL-2.0
+    stars: 23213
+  open_source: true
   commercial: false
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
-  confidence: low
+  label: Self-hosted open source · you run it yourself
+  confidence: medium
   source:
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
